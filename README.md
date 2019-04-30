@@ -11,7 +11,7 @@ sumpy is the Python client interface to the [sum linear algebra database](https:
 
 #### Installation
 
-    sudo pip3 install sumpy
+    sudo pip3 install sum-py
 
 #### Building from Source
 

@@ -6,7 +6,7 @@ import os
 
 desc = 'Python client for Sum linear algebra database.'
 
-setup( name                 = 'sumpy',
+setup( name                 = 'sum-py',
        version              = sumpy.__version__,
        description          = desc,
        long_description     = desc,
