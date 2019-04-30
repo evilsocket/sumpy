@@ -28,4 +28,3 @@ See `example.py` for a complete example.
 #### License
 
 `sumpy` was made with ♥  by [the dev team](https://github.com/evilsocket/sumpy/graphs/contributors) and it is released under the GPL 3 license.
-
