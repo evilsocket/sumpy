@@ -1,0 +1,6 @@
+exclude *.pyc .DS_Store .gitignore MANIFEST.in
+include setup.py
+include distribute_setup.py
+include README.md
+include LICENSE.md
+recursive-include sumpy *.py
