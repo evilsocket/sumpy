@@ -90,6 +90,11 @@ class Client:
         self._check_resp(resp)
         return resp.oracle
 
+    def find_oracle(self, name):
+        resp = self._rpc.FindOracle(protocol.ByName(name=name))
+        self._check_resp(resp)
+        return resp.oracle
+
     def list_oracles(self, page, per_page):
         return self._rpc.ListOracles(protocol.ListRequest( \
             page=page,
