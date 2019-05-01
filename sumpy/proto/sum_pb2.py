@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='sum',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\tsum.proto\x12\x03sum\"t\n\x06Record\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04\x64\x61ta\x18\x02 \x03(\x01\x12#\n\x04meta\x18\x03 \x03(\x0b\x32\x15.sum.Record.MetaEntry\x1a+\n\tMetaEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"K\n\x0eRecordResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x1b\n\x06record\x18\x03 \x01(\x0b\x32\x0b.sum.Record\"-\n\x0bListRequest\x12\x0c\n\x04page\x18\x01 \x01(\x04\x12\x10\n\x08per_page\x18\x02 \x01(\x04\"P\n\x12RecordListResponse\x12\r\n\x05total\x18\x01 \x01(\x04\x12\r\n\x05pages\x18\x02 \x01(\x04\x12\x1c\n\x07records\x18\x03 \x03(\x0b\x32\x0b.sum.Record\"J\n\x0c\x46indResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x1c\n\x07records\x18\x03 \x03(\x0b\x32\x0b.sum.Record\"0\n\x06Oracle\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04\x63ode\x18\x03 \x01(\t\"L\n\x0eOracleResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x1c\n\x07oracles\x18\x03 \x03(\x0b\x32\x0b.sum.Oracle\"\'\n\x04\x43\x61ll\x12\x11\n\toracle_id\x18\x01 \x01(\x04\x12\x0c\n\x04\x61rgs\x18\x02 \x03(\t\"+\n\x04\x44\x61ta\x12\x12\n\ncompressed\x18\x01 \x01(\x08\x12\x0f\n\x07payload\x18\x02 \x01(\x0c\"E\n\x0c\x43\x61llResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x17\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\t.sum.Data\"\x12\n\x04\x42yId\x12\n\n\x02id\x18\x01 \x01(\x04\"\x16\n\x06\x42yName\x12\x0c\n\x04name\x18\x01 \x01(\t\"%\n\x06\x42yMeta\x12\x0c\n\x04meta\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"w\n\nServerInfo\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\x0e\n\x06uptime\x18\x02 \x01(\x04\x12\x0b\n\x03pid\x18\x03 \x01(\x04\x12\x0b\n\x03uid\x18\x04 \x01(\x04\x12\x0c\n\x04\x61rgv\x18\x05 \x03(\t\x12\x0f\n\x07records\x18\x06 \x01(\x04\x12\x0f\n\x07oracles\x18\x07 \x01(\x04\"\x07\n\x05\x45mpty2\x8d\x05\n\nSumService\x12\x32\n\x0c\x43reateRecord\x12\x0b.sum.Record\x1a\x13.sum.RecordResponse\"\x00\x12\x32\n\x0cUpdateRecord\x12\x0b.sum.Record\x1a\x13.sum.RecordResponse\"\x00\x12.\n\nReadRecord\x12\t.sum.ById\x1a\x13.sum.RecordResponse\"\x00\x12:\n\x0bListRecords\x12\x10.sum.ListRequest\x1a\x17.sum.RecordListResponse\"\x00\x12\x30\n\x0c\x44\x65leteRecord\x12\t.sum.ById\x1a\x13.sum.RecordResponse\"\x00\x12/\n\x0b\x46indRecords\x12\x0b.sum.ByMeta\x1a\x11.sum.FindResponse\"\x00\x12\x32\n\x0c\x43reateOracle\x12\x0b.sum.Oracle\x1a\x13.sum.OracleResponse\"\x00\x12\x32\n\x0cUpdateOracle\x12\x0b.sum.Oracle\x1a\x13.sum.OracleResponse\"\x00\x12.\n\nReadOracle\x12\t.sum.ById\x1a\x13.sum.OracleResponse\"\x00\x12\x30\n\nFindOracle\x12\x0b.sum.ByName\x1a\x13.sum.OracleResponse\"\x00\x12\x30\n\x0c\x44\x65leteOracle\x12\t.sum.ById\x1a\x13.sum.OracleResponse\"\x00\x12%\n\x03Run\x12\t.sum.Call\x1a\x11.sum.CallResponse\"\x00\x12%\n\x04Info\x12\n.sum.Empty\x1a\x0f.sum.ServerInfo\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\tsum.proto\x12\x03sum\"t\n\x06Record\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04\x64\x61ta\x18\x02 \x03(\x01\x12#\n\x04meta\x18\x03 \x03(\x0b\x32\x15.sum.Record.MetaEntry\x1a+\n\tMetaEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"K\n\x0eRecordResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x1b\n\x06record\x18\x03 \x01(\x0b\x32\x0b.sum.Record\"-\n\x0bListRequest\x12\x0c\n\x04page\x18\x01 \x01(\x04\x12\x10\n\x08per_page\x18\x02 \x01(\x04\"P\n\x12RecordListResponse\x12\r\n\x05total\x18\x01 \x01(\x04\x12\r\n\x05pages\x18\x02 \x01(\x04\x12\x1c\n\x07records\x18\x03 \x03(\x0b\x32\x0b.sum.Record\"P\n\x12OracleListResponse\x12\r\n\x05total\x18\x01 \x01(\x04\x12\r\n\x05pages\x18\x02 \x01(\x04\x12\x1c\n\x07oracles\x18\x03 \x03(\x0b\x32\x0b.sum.Oracle\"J\n\x0c\x46indResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x1c\n\x07records\x18\x03 \x03(\x0b\x32\x0b.sum.Record\"0\n\x06Oracle\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04\x63ode\x18\x03 \x01(\t\"K\n\x0eOracleResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x1b\n\x06oracle\x18\x03 \x01(\x0b\x32\x0b.sum.Oracle\"\'\n\x04\x43\x61ll\x12\x11\n\toracle_id\x18\x01 \x01(\x04\x12\x0c\n\x04\x61rgs\x18\x02 \x03(\t\"+\n\x04\x44\x61ta\x12\x12\n\ncompressed\x18\x01 \x01(\x08\x12\x0f\n\x07payload\x18\x02 \x01(\x0c\"E\n\x0c\x43\x61llResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x12\x0b\n\x03msg\x18\x02 \x01(\t\x12\x17\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\t.sum.Data\"\x12\n\x04\x42yId\x12\n\n\x02id\x18\x01 \x01(\x04\"\x16\n\x06\x42yName\x12\x0c\n\x04name\x18\x01 \x01(\t\"%\n\x06\x42yMeta\x12\x0c\n\x04meta\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xbb\x02\n\nServerInfo\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\n\n\x02os\x18\x02 \x01(\t\x12\x0c\n\x04\x61rch\x18\x03 \x01(\t\x12\x12\n\ngo_version\x18\x04 \x01(\t\x12\x0c\n\x04\x63pus\x18\x05 \x01(\x04\x12\x10\n\x08max_cpus\x18\x06 \x01(\x04\x12\x12\n\ngoroutines\x18\x07 \x01(\x04\x12\r\n\x05\x61lloc\x18\x08 \x01(\x04\x12\x0b\n\x03sys\x18\t \x01(\x04\x12\x0e\n\x06num_gc\x18\n \x01(\x04\x12\x10\n\x08\x64\x61tapath\x18\x0b \x01(\t\x12\x11\n\tcredspath\x18\x0c \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\r \x01(\t\x12\x0e\n\x06uptime\x18\x0e \x01(\x04\x12\x0b\n\x03pid\x18\x0f \x01(\x04\x12\x0b\n\x03uid\x18\x10 \x01(\x04\x12\x0c\n\x04\x61rgv\x18\x11 \x03(\t\x12\x0f\n\x07records\x18\x12 \x01(\x04\x12\x0f\n\x07oracles\x18\x13 \x01(\x04\"\x07\n\x05\x45mpty2\xc9\x05\n\nSumService\x12\x32\n\x0c\x43reateRecord\x12\x0b.sum.Record\x1a\x13.sum.RecordResponse\"\x00\x12\x32\n\x0cUpdateRecord\x12\x0b.sum.Record\x1a\x13.sum.RecordResponse\"\x00\x12.\n\nReadRecord\x12\t.sum.ById\x1a\x13.sum.RecordResponse\"\x00\x12:\n\x0bListRecords\x12\x10.sum.ListRequest\x1a\x17.sum.RecordListResponse\"\x00\x12\x30\n\x0c\x44\x65leteRecord\x12\t.sum.ById\x1a\x13.sum.RecordResponse\"\x00\x12/\n\x0b\x46indRecords\x12\x0b.sum.ByMeta\x1a\x11.sum.FindResponse\"\x00\x12\x32\n\x0c\x43reateOracle\x12\x0b.sum.Oracle\x1a\x13.sum.OracleResponse\"\x00\x12\x32\n\x0cUpdateOracle\x12\x0b.sum.Oracle\x1a\x13.sum.OracleResponse\"\x00\x12.\n\nReadOracle\x12\t.sum.ById\x1a\x13.sum.OracleResponse\"\x00\x12:\n\x0bListOracles\x12\x10.sum.ListRequest\x1a\x17.sum.OracleListResponse\"\x00\x12\x30\n\nFindOracle\x12\x0b.sum.ByName\x1a\x13.sum.OracleResponse\"\x00\x12\x30\n\x0c\x44\x65leteOracle\x12\t.sum.ById\x1a\x13.sum.OracleResponse\"\x00\x12%\n\x03Run\x12\t.sum.Call\x1a\x11.sum.CallResponse\"\x00\x12%\n\x04Info\x12\n.sum.Empty\x1a\x0f.sum.ServerInfo\"\x00\x62\x06proto3')
 )
 
 
@@ -236,6 +236,51 @@ _RECORDLISTRESPONSE = _descriptor.Descriptor(
 )
 
 
+_ORACLELISTRESPONSE = _descriptor.Descriptor(
+  name='OracleListResponse',
+  full_name='sum.OracleListResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='total', full_name='sum.OracleListResponse.total', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pages', full_name='sum.OracleListResponse.pages', index=1,
+      number=2, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='oracles', full_name='sum.OracleListResponse.oracles', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=342,
+  serialized_end=422,
+)
+
+
 _FINDRESPONSE = _descriptor.Descriptor(
   name='FindResponse',
   full_name='sum.FindResponse',
@@ -276,8 +321,8 @@ _FINDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=342,
-  serialized_end=416,
+  serialized_start=424,
+  serialized_end=498,
 )
 
 
@@ -321,8 +366,8 @@ _ORACLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=418,
-  serialized_end=466,
+  serialized_start=500,
+  serialized_end=548,
 )
 
 
@@ -348,9 +393,9 @@ _ORACLERESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='oracles', full_name='sum.OracleResponse.oracles', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='oracle', full_name='sum.OracleResponse.oracle', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -366,8 +411,8 @@ _ORACLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=468,
-  serialized_end=544,
+  serialized_start=550,
+  serialized_end=625,
 )
 
 
@@ -404,8 +449,8 @@ _CALL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=546,
-  serialized_end=585,
+  serialized_start=627,
+  serialized_end=666,
 )
 
 
@@ -442,8 +487,8 @@ _DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=587,
-  serialized_end=630,
+  serialized_start=668,
+  serialized_end=711,
 )
 
 
@@ -487,8 +532,8 @@ _CALLRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=632,
-  serialized_end=701,
+  serialized_start=713,
+  serialized_end=782,
 )
 
 
@@ -518,8 +563,8 @@ _BYID = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=703,
-  serialized_end=721,
+  serialized_start=784,
+  serialized_end=802,
 )
 
 
@@ -549,8 +594,8 @@ _BYNAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=723,
-  serialized_end=745,
+  serialized_start=804,
+  serialized_end=826,
 )
 
 
@@ -587,8 +632,8 @@ _BYMETA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=747,
-  serialized_end=784,
+  serialized_start=828,
+  serialized_end=865,
 )
 
 
@@ -607,43 +652,127 @@ _SERVERINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='uptime', full_name='sum.ServerInfo.uptime', index=1,
-      number=2, type=4, cpp_type=4, label=1,
+      name='os', full_name='sum.ServerInfo.os', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='arch', full_name='sum.ServerInfo.arch', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='go_version', full_name='sum.ServerInfo.go_version', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='cpus', full_name='sum.ServerInfo.cpus', index=4,
+      number=5, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='pid', full_name='sum.ServerInfo.pid', index=2,
-      number=3, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='uid', full_name='sum.ServerInfo.uid', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='argv', full_name='sum.ServerInfo.argv', index=4,
-      number=5, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='records', full_name='sum.ServerInfo.records', index=5,
+      name='max_cpus', full_name='sum.ServerInfo.max_cpus', index=5,
       number=6, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='oracles', full_name='sum.ServerInfo.oracles', index=6,
+      name='goroutines', full_name='sum.ServerInfo.goroutines', index=6,
       number=7, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='alloc', full_name='sum.ServerInfo.alloc', index=7,
+      number=8, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='sys', full_name='sum.ServerInfo.sys', index=8,
+      number=9, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='num_gc', full_name='sum.ServerInfo.num_gc', index=9,
+      number=10, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='datapath', full_name='sum.ServerInfo.datapath', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='credspath', full_name='sum.ServerInfo.credspath', index=11,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='address', full_name='sum.ServerInfo.address', index=12,
+      number=13, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='uptime', full_name='sum.ServerInfo.uptime', index=13,
+      number=14, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pid', full_name='sum.ServerInfo.pid', index=14,
+      number=15, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='uid', full_name='sum.ServerInfo.uid', index=15,
+      number=16, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='argv', full_name='sum.ServerInfo.argv', index=16,
+      number=17, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='records', full_name='sum.ServerInfo.records', index=17,
+      number=18, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='oracles', full_name='sum.ServerInfo.oracles', index=18,
+      number=19, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -660,8 +789,8 @@ _SERVERINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=786,
-  serialized_end=905,
+  serialized_start=868,
+  serialized_end=1183,
 )
 
 
@@ -684,21 +813,23 @@ _EMPTY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=907,
-  serialized_end=914,
+  serialized_start=1185,
+  serialized_end=1192,
 )
 
 _RECORD_METAENTRY.containing_type = _RECORD
 _RECORD.fields_by_name['meta'].message_type = _RECORD_METAENTRY
 _RECORDRESPONSE.fields_by_name['record'].message_type = _RECORD
 _RECORDLISTRESPONSE.fields_by_name['records'].message_type = _RECORD
+_ORACLELISTRESPONSE.fields_by_name['oracles'].message_type = _ORACLE
 _FINDRESPONSE.fields_by_name['records'].message_type = _RECORD
-_ORACLERESPONSE.fields_by_name['oracles'].message_type = _ORACLE
+_ORACLERESPONSE.fields_by_name['oracle'].message_type = _ORACLE
 _CALLRESPONSE.fields_by_name['data'].message_type = _DATA
 DESCRIPTOR.message_types_by_name['Record'] = _RECORD
 DESCRIPTOR.message_types_by_name['RecordResponse'] = _RECORDRESPONSE
 DESCRIPTOR.message_types_by_name['ListRequest'] = _LISTREQUEST
 DESCRIPTOR.message_types_by_name['RecordListResponse'] = _RECORDLISTRESPONSE
+DESCRIPTOR.message_types_by_name['OracleListResponse'] = _ORACLELISTRESPONSE
 DESCRIPTOR.message_types_by_name['FindResponse'] = _FINDRESPONSE
 DESCRIPTOR.message_types_by_name['Oracle'] = _ORACLE
 DESCRIPTOR.message_types_by_name['OracleResponse'] = _ORACLERESPONSE
@@ -747,6 +878,13 @@ RecordListResponse = _reflection.GeneratedProtocolMessageType('RecordListRespons
   # @@protoc_insertion_point(class_scope:sum.RecordListResponse)
   ))
 _sym_db.RegisterMessage(RecordListResponse)
+
+OracleListResponse = _reflection.GeneratedProtocolMessageType('OracleListResponse', (_message.Message,), dict(
+  DESCRIPTOR = _ORACLELISTRESPONSE,
+  __module__ = 'sum_pb2'
+  # @@protoc_insertion_point(class_scope:sum.OracleListResponse)
+  ))
+_sym_db.RegisterMessage(OracleListResponse)
 
 FindResponse = _reflection.GeneratedProtocolMessageType('FindResponse', (_message.Message,), dict(
   DESCRIPTOR = _FINDRESPONSE,
@@ -834,8 +972,8 @@ _SUMSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=917,
-  serialized_end=1570,
+  serialized_start=1195,
+  serialized_end=1908,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateRecord',
@@ -919,9 +1057,18 @@ _SUMSERVICE = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
+    name='ListOracles',
+    full_name='sum.SumService.ListOracles',
+    index=9,
+    containing_service=None,
+    input_type=_LISTREQUEST,
+    output_type=_ORACLELISTRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
     name='FindOracle',
     full_name='sum.SumService.FindOracle',
-    index=9,
+    index=10,
     containing_service=None,
     input_type=_BYNAME,
     output_type=_ORACLERESPONSE,
@@ -930,7 +1077,7 @@ _SUMSERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='DeleteOracle',
     full_name='sum.SumService.DeleteOracle',
-    index=10,
+    index=11,
     containing_service=None,
     input_type=_BYID,
     output_type=_ORACLERESPONSE,
@@ -939,7 +1086,7 @@ _SUMSERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='Run',
     full_name='sum.SumService.Run',
-    index=11,
+    index=12,
     containing_service=None,
     input_type=_CALL,
     output_type=_CALLRESPONSE,
@@ -948,7 +1095,7 @@ _SUMSERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='Info',
     full_name='sum.SumService.Info',
-    index=12,
+    index=13,
     containing_service=None,
     input_type=_EMPTY,
     output_type=_SERVERINFO,

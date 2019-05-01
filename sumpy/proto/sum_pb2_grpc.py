@@ -59,6 +59,11 @@ class SumServiceStub(object):
         request_serializer=sum__pb2.ById.SerializeToString,
         response_deserializer=sum__pb2.OracleResponse.FromString,
         )
+    self.ListOracles = channel.unary_unary(
+        '/sum.SumService/ListOracles',
+        request_serializer=sum__pb2.ListRequest.SerializeToString,
+        response_deserializer=sum__pb2.OracleListResponse.FromString,
+        )
     self.FindOracle = channel.unary_unary(
         '/sum.SumService/FindOracle',
         request_serializer=sum__pb2.ByName.SerializeToString,
@@ -148,6 +153,13 @@ class SumServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def ListOracles(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def FindOracle(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -223,6 +235,11 @@ def add_SumServiceServicer_to_server(servicer, server):
           servicer.ReadOracle,
           request_deserializer=sum__pb2.ById.FromString,
           response_serializer=sum__pb2.OracleResponse.SerializeToString,
+      ),
+      'ListOracles': grpc.unary_unary_rpc_method_handler(
+          servicer.ListOracles,
+          request_deserializer=sum__pb2.ListRequest.FromString,
+          response_serializer=sum__pb2.OracleListResponse.SerializeToString,
       ),
       'FindOracle': grpc.unary_unary_rpc_method_handler(
           servicer.FindOracle,

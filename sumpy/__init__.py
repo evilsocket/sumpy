@@ -14,7 +14,7 @@ __author__    = 'Simone Margaritelli'
 __email__     = 'evilsocket@gmail.com'
 __copyright__ = 'Copyright 2019, Simone Margaritelli'
 __license__   = 'GPL3'
-__version__   = '1.0.0'
+__version__   = '1.1.0'
 __status__    = 'Production'
 
 MAX_MESSAGE_SIZE = 10 * 1024 * 1024
@@ -76,19 +76,28 @@ class Client:
         return resp.records
 
     def define_oracle_code(self, name, code):
-        resp = self._rpc.FindOracle(protocol.ByName(name=name))
+        oracle = protocol.Oracle(name=name, code=code)
+        resp = self._rpc.CreateOracle(oracle)
         self._check_resp(resp)
-        if len(resp.oracles) == 0:
-            oracle = protocol.Oracle(name=name, code=code)
-            resp = self._rpc.CreateOracle(oracle)
-            self._check_resp(resp)
-            return int(resp.msg)
-        else:
-            return resp.oracles[0].id
+        return int(resp.msg)
 
     def define_oracle(self, name, filename):
         with open( filename, 'r') as fp:
             return self.define_oracle_code(name, fp.read())
+
+    def read_oracle(self, identifier):
+        resp = self._rpc.ReadOracle(protocol.ById(id=int(identifier)))
+        self._check_resp(resp)
+        return resp.oracle
+
+    def list_oracles(self, page, per_page):
+        return self._rpc.ListOracles(protocol.ListRequest( \
+            page=page,
+            per_page=per_page))
+
+    def delete_oracle(self, identifier):
+        resp = self._rpc.DeleteOracle(protocol.ById(id=identifier))
+        self._check_resp(resp)
 
     def invoke_oracle(self, oracle_id, args):
         resp = self._rpc.Run(protocol.Call(oracle_id=oracle_id, args=map(json.dumps, args)))
