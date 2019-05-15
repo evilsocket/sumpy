@@ -265,3 +265,121 @@ def add_SumServiceServicer_to_server(servicer, server):
   generic_handler = grpc.method_handlers_generic_handler(
       'sum.SumService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))
+
+
+class SumInternalServiceStub(object):
+  # missing associated documentation comment in .proto file
+  pass
+
+  def __init__(self, channel):
+    """Constructor.
+
+    Args:
+      channel: A grpc.Channel.
+    """
+    self.CreateRecordWithId = channel.unary_unary(
+        '/sum.SumInternalService/CreateRecordWithId',
+        request_serializer=sum__pb2.Record.SerializeToString,
+        response_deserializer=sum__pb2.RecordResponse.FromString,
+        )
+
+
+class SumInternalServiceServicer(object):
+  # missing associated documentation comment in .proto file
+  pass
+
+  def CreateRecordWithId(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+
+def add_SumInternalServiceServicer_to_server(servicer, server):
+  rpc_method_handlers = {
+      'CreateRecordWithId': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateRecordWithId,
+          request_deserializer=sum__pb2.Record.FromString,
+          response_serializer=sum__pb2.RecordResponse.SerializeToString,
+      ),
+  }
+  generic_handler = grpc.method_handlers_generic_handler(
+      'sum.SumInternalService', rpc_method_handlers)
+  server.add_generic_rpc_handlers((generic_handler,))
+
+
+class SumMasterServiceStub(object):
+  # missing associated documentation comment in .proto file
+  pass
+
+  def __init__(self, channel):
+    """Constructor.
+
+    Args:
+      channel: A grpc.Channel.
+    """
+    self.AddNode = channel.unary_unary(
+        '/sum.SumMasterService/AddNode',
+        request_serializer=sum__pb2.ByAddr.SerializeToString,
+        response_deserializer=sum__pb2.NodeResponse.FromString,
+        )
+    self.ListNodes = channel.unary_unary(
+        '/sum.SumMasterService/ListNodes',
+        request_serializer=sum__pb2.Empty.SerializeToString,
+        response_deserializer=sum__pb2.NodeResponse.FromString,
+        )
+    self.DeleteNode = channel.unary_unary(
+        '/sum.SumMasterService/DeleteNode',
+        request_serializer=sum__pb2.ById.SerializeToString,
+        response_deserializer=sum__pb2.NodeResponse.FromString,
+        )
+
+
+class SumMasterServiceServicer(object):
+  # missing associated documentation comment in .proto file
+  pass
+
+  def AddNode(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def ListNodes(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def DeleteNode(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+
+def add_SumMasterServiceServicer_to_server(servicer, server):
+  rpc_method_handlers = {
+      'AddNode': grpc.unary_unary_rpc_method_handler(
+          servicer.AddNode,
+          request_deserializer=sum__pb2.ByAddr.FromString,
+          response_serializer=sum__pb2.NodeResponse.SerializeToString,
+      ),
+      'ListNodes': grpc.unary_unary_rpc_method_handler(
+          servicer.ListNodes,
+          request_deserializer=sum__pb2.Empty.FromString,
+          response_serializer=sum__pb2.NodeResponse.SerializeToString,
+      ),
+      'DeleteNode': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteNode,
+          request_deserializer=sum__pb2.ById.FromString,
+          response_serializer=sum__pb2.NodeResponse.SerializeToString,
+      ),
+  }
+  generic_handler = grpc.method_handlers_generic_handler(
+      'sum.SumMasterService', rpc_method_handlers)
+  server.add_generic_rpc_handlers((generic_handler,))
