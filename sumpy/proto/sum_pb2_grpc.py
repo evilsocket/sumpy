@@ -282,6 +282,16 @@ class SumInternalServiceStub(object):
         request_serializer=sum__pb2.Record.SerializeToString,
         response_deserializer=sum__pb2.RecordResponse.FromString,
         )
+    self.CreateRecordsWithId = channel.unary_unary(
+        '/sum.SumInternalService/CreateRecordsWithId',
+        request_serializer=sum__pb2.Records.SerializeToString,
+        response_deserializer=sum__pb2.RecordResponse.FromString,
+        )
+    self.DeleteRecords = channel.unary_unary(
+        '/sum.SumInternalService/DeleteRecords',
+        request_serializer=sum__pb2.RecordIds.SerializeToString,
+        response_deserializer=sum__pb2.RecordResponse.FromString,
+        )
 
 
 class SumInternalServiceServicer(object):
@@ -295,12 +305,36 @@ class SumInternalServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def CreateRecordsWithId(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def DeleteRecords(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_SumInternalServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'CreateRecordWithId': grpc.unary_unary_rpc_method_handler(
           servicer.CreateRecordWithId,
           request_deserializer=sum__pb2.Record.FromString,
+          response_serializer=sum__pb2.RecordResponse.SerializeToString,
+      ),
+      'CreateRecordsWithId': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateRecordsWithId,
+          request_deserializer=sum__pb2.Records.FromString,
+          response_serializer=sum__pb2.RecordResponse.SerializeToString,
+      ),
+      'DeleteRecords': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteRecords,
+          request_deserializer=sum__pb2.RecordIds.FromString,
           response_serializer=sum__pb2.RecordResponse.SerializeToString,
       ),
   }
