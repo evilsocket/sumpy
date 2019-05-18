@@ -14,7 +14,7 @@ __author__    = 'Simone Margaritelli'
 __email__     = 'evilsocket@gmail.com'
 __copyright__ = 'Copyright 2019, Simone Margaritelli'
 __license__   = 'GPL3'
-__version__   = '1.3.3'
+__version__   = '1.3.4'
 __status__    = 'Production'
 
 MAX_MESSAGE_SIZE = 10 * 1024 * 1024
